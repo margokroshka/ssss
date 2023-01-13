@@ -1,0 +1,27 @@
+create table if not exists money_table
+(
+	id bigserial not null
+		constraint money_table_pk
+			primary key,
+	naminal text,
+	amount integer default 0,
+	valuta varchar(10)
+);
+
+alter table money_table owner to postgres;
+
+
+
+
+____________________
+create table if not exists valuta_table
+(
+	id bigserial not null
+		constraint valuta_table_pk
+			primary key,
+	valuta_name varchar(10),
+	opisanie varchar
+);
+
+alter table valuta_table owner to postgres;
+
